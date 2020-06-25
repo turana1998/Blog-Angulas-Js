@@ -1,0 +1,25 @@
+
+<table class="table ">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">№</th>
+        <th scope="col">Emeliyyatlar</th>
+        <th scope="col">Ad</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr ng-repeat="x in posts" id="{{x.id}}" ng-style="myStyle">
+        <th scope="row">1</th>
+        <td >
+            <button type="button" class="btn btn-primary" >Profil</button>
+        </td>
+        <td>
+            <span >{{x.title }}</span>
+        </td>
+
+        <td><span>a</span>
+        <td>
+    </tr>
+    </tbody>
+</table>

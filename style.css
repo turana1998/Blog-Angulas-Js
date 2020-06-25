@@ -1,0 +1,87 @@
+
+  body, html {
+    overflow-x: hidden;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+.bg-text {
+    height:100%;
+    background-color: #ebebe0;
+
+
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-left: 50px;
+    background-color: white;
+
+}
+#customers tr{
+    border: 1px solid grey;
+}
+
+#customers td, #customers th {
+
+    padding: 18px;
+
+}
+#customers tr:hover {background-color: #ddd;
+    border: 3px solid #ac00e6 ;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 50px;
+    margin:auto;
+
+}
+
+#profile-container img {
+    width: 150px;
+    height: 150px;
+}
+  a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 16px;
+  }
+
+  a:hover {
+      background-color: #ddd;
+      color: black;
+  }
+  .previous {
+      background-color: #f1f1f1;
+      color: black;
+  }
+
+  .next {
+      background-color: #4CAF50;
+      color: white;
+  }
+
+  .round {
+      border-radius: 50%;
+  }

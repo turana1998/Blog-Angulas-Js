@@ -1,0 +1,35 @@
+
+   <div>
+    <table class="table ">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Emeliyyatlar</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Soyad</th>
+            <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat="x in users" id="{{x.id}}" ng-style="myStyle">
+            <th scope="row">{{x.id}}</th>
+            <td >
+                <button type="button" class="btn btn-primary" ng-click="showUser($index)">Profil</button>
+            </td>
+            <td>
+                <span >{{x.first_name }}</span>
+
+            <td><span>{{x.last_name }}</span>
+            <td>
+                <span ng-hide="x.edit">{{x.email }}</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+        <div>
+            <button ng-repeat="pg in pages track by $index"  ng-click="changePage(pg.id)"  ng-class="{'selected':pg.selected}">
+                {{pg.id}}
+            </button>
+        </div>
+   </div>

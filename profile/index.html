@@ -1,0 +1,55 @@
+<div class="bg-text">
+    <loading ng-if="!user"></loading>
+    <a ng-if="user.id>1" href="#/users/{{user.id-1}}" ng-click="showUser($index+1)" class="previous round">&#8249;</a>
+    <a ng-if="user.id<10" href="#/users/{{user.id+1}}" class="next round">&#8250;</a>
+    <div id="profile-container" ng-if="user">
+        <img id="profileImage" src="{{user.avatar}}" />
+    </div>
+    <h3 ng-if="user" style="text-align: center">{{user.first_name}}</h3>
+    <h5 ng-if="user" style="text-align: center">{{user.last_name}}</h5>
+   
+    <div ng-if="user" class="row">
+        <div class="col-6">
+            <table id="customers">
+                <h3 style="margin-left: 50px">Basic Information</h3>
+                <tr >
+                    <td >Full Name</td>
+                    <td>{{user.first_name+' '+user.last_name}}</td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td>{{user.email}}</td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>{{user.phone.substring(1,12)}}</td>
+                </tr>
+                <tr>
+                    <td>Social</td>
+                    <td>{{user.website}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-6">
+            <table id="customers">
+                <h3 style="margin-left: 50px">Others Information</h3>
+                <tr >
+                    <td >Address</td>
+                    <td>{{user.address.city}}</td>
+                </tr>
+                <tr >
+                    <td >Street</td>
+                    <td>{{user.address.street}}</td>
+                </tr>
+                <tr>
+                    <td>Company</td>
+                    <td>{{user.company.name}}</td>
+                </tr>
+                <tr>
+                    <td>Phrase</td>
+                    <td>{{user.company.catchPhrase}}</td>
+                </tr>
+               </table>
+        </div>
+    </div>
+</div>
